@@ -17,7 +17,9 @@ app.use(express.json());
 app.use(cors());
 app.use('/api/doc', doc);
 app.use('/api/auth', authRoutes);
-
+app.get('/', (req,res)=>{
+    res.send('Welcome to DocApi');
+})
 const port=process.env.PORT || 3500
 app.listen(port, () => {
     console.log(`Server Started at ${port}`)

@@ -18,6 +18,7 @@ app.use(cors());
 app.use('/api/doc', doc);
 app.use('/api/auth', authRoutes);
 
-app.listen(3500, () => {
-    console.log(`Server Started at ${3500}`)
+const port=process.env.PORT || 3500
+app.listen(port, () => {
+    console.log(`Server Started at ${port}`)
 });

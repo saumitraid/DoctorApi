@@ -3,7 +3,9 @@ const mongoose=require('mongoose');
 const dotenv=require('dotenv').config();
 const cors=require('cors');
 
-mongoose.connect(process.env.DATABASE_URL)
+mongoose.connect(process.env.DATABASE_URL,{
+  dbName: 'docapp'
+})
 .then(
     ()=>console.log('Connected with MongoDB'))
     .catch(
